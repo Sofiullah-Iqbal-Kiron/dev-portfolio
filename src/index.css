@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .link {
+        @apply transition-all duration-150
+    }
+
+    .nav-link {
+        @apply text-xl hover:text-gray-300
+    }
+
+    .social-link {
+        @apply hover:scale-105
+    }
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
