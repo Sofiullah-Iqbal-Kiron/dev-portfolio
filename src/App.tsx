@@ -1,6 +1,3 @@
-import {useState} from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import {HeroPage} from "./pages/HeroPage";
 import {Route, Routes} from "react-router-dom";
 import {AboutPage} from "./pages/AboutPage";
@@ -8,10 +5,12 @@ import {ContactPage} from "./pages/ContactPage";
 import {ProjectsPage} from "./pages/ProjectsPage";
 import {Navbar} from "./components/Navbar";
 
+import galaxy_bg from "../src/assets/galaxy_bg.jpg";
+
 function App() {
     return (
-        <div
-            className='relative bg-gradient-to-r from-gray-950 via-gray-900 to-gray-950 text-white min-h-screen overflow-x-hidden overflow-y-hidden px-5 lg:px-0'>
+        <div style={{backgroundImage: `url('${galaxy_bg}')`}}
+             className='relative bg-cover bg-gradient-to-r from-gray-950 via-gray-900 to-gray-950 text-white min-h-screen overflow-x-hidden overflow-y-hidden px-5 lg:px-0'>
             <Navbar/>
             <Routes>
                 <Route path='/' element={<HeroPage/>}/>

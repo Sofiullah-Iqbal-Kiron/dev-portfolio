@@ -28,19 +28,26 @@ const social_links: Array<Links> = [
 export function HeroPage() {
     return (
         <section
-            className='min-h-screen flex flex-col md:flex-row justify-center space-y-12 md:space-y-0 md:justify-around items-center'>
+            className='hero-page'>
             <SocialLinks/>
 
-            <motion.div
-                initial={{y: 100, opacity: 0}}
-                animate={{y: 0, opacity: 1}}
-                transition={{delay: 0.7, duration: 0.5}}
+            <div className='flex flex-col space-y-2 text-center'>
+                <motion.h1
+                    initial={{y: 20, opacity: 0}}
+                    animate={{y: 0, opacity: 1}}
+                    transition={{delay: 1, duration: 0.7}}
 
-                className='flex flex-col space-y-2 text-center'>
-                <h1 className='text-3xl sm:text-4xl md:text-6xl font-medium'>Sofiullah Iqbal Kiron</h1>
-                <h2 className='text-xl sm:text-2xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-br from-gray-100 to-gray-300'>Full
-                    Stack Web Programmer</h2>
-            </motion.div>
+                    className='text-3xl sm:text-4xl md:text-6xl font-medium'>Sofiullah Iqbal Kiron
+                </motion.h1>
+                <motion.h2
+                    initial={{y: 20, opacity: 0}}
+                    animate={{y: 0, opacity: 1}}
+                    transition={{delay: 1.5, duration: 0.7}}
+
+                    className='text-xl sm:text-2xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-br from-gray-100 to-gray-300'>Full
+                    Stack Web Programmer
+                </motion.h2>
+            </div>
 
             <HeroImage/>
         </section>
