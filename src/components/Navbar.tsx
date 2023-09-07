@@ -1,3 +1,4 @@
+import {motion} from 'framer-motion'
 import {Link} from 'react-router-dom'
 
 interface Links {
@@ -22,8 +23,15 @@ const nav_links: Array<Links> = [
 
 export function Navbar() {
     return (
-        <nav id='navbar' className='absolute top-0 inset-x-0 z-10 h-[4rem]'>
-            <ul className='px-2 flex justify-center sm:justify-end items-center space-x-10 md:space-x-16 h-full pe-5'>
+        <motion.nav
+            initial={{y: '-100vh', opacity: 0}}
+            animate={{y: 0, opacity: 1}}
+            transition={{duration: 0.7}}
+
+            id='navbar' className='absolute top-0 inset-x-0 z-10 h-[4rem] flex justify-between items-center px-5 backdrop-blur-sm'>
+
+            <Link to='/' className='link nav-link text-2xl'>KIRON</Link>
+            <ul className='flex justify-center sm:justify-end items-center space-x-10 md:space-x-16 h-full'>
                 {
                     nav_links.map((link, idx) =>
                         <li key={idx} className='link nav-link'>
@@ -33,6 +41,6 @@ export function Navbar() {
                         </li>)
                 }
             </ul>
-        </nav>
+        </motion.nav>
     )
 }

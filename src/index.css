@@ -8,7 +8,7 @@
     }
 
     .nav-link {
-        @apply text-xl hover:text-gray-300
+        @apply text-xl hover:text-blue-500
     }
 
     .social-link {

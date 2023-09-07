@@ -6,11 +6,13 @@ import {Route, Routes} from "react-router-dom";
 import {AboutPage} from "./pages/AboutPage";
 import {ContactPage} from "./pages/ContactPage";
 import {ProjectsPage} from "./pages/ProjectsPage";
+import {Navbar} from "./components/Navbar";
 
 function App() {
     return (
         <div
-            className='bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white min-h-screen overflow-x-hidden overflow-y-hidden px-5 lg:px-0'>
+            className='relative bg-gradient-to-r from-gray-950 via-gray-900 to-gray-950 text-white min-h-screen overflow-x-hidden overflow-y-hidden px-5 lg:px-0'>
+            <Navbar/>
             <Routes>
                 <Route path='/' element={<HeroPage/>}/>
                 <Route path='about' element={<AboutPage/>}/>
