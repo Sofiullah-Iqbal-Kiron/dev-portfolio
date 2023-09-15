@@ -1,25 +1,7 @@
 import {motion} from 'framer-motion'
 import {Link} from 'react-router-dom'
-
-interface Links {
-    content: any,
-    link: string
-}
-
-const nav_links: Array<Links> = [
-    {
-        content: 'About',
-        link: 'about'
-    },
-    {
-        content: 'Projects',
-        link: 'projects'
-    },
-    {
-        content: 'Contact',
-        link: 'contact'
-    },
-]
+import {MobileNav} from "./MobileNav";
+import {WideNav} from "./WideNav";
 
 export function Navbar() {
     return (
@@ -28,19 +10,15 @@ export function Navbar() {
             animate={{y: 0, opacity: 1}}
             transition={{duration: 1}}
 
-            id='navbar' className='absolute top-0 inset-x-0 z-30 h-[4rem] flex justify-between items-center px-5'>
+            id='navbar' className='bg-white/10 backdrop-blur-sm fixed top-0 inset-x-0 z-30 h-[4rem] flex justify-between items-center px-5'
+        >
 
-            <Link to='/' className='link nav-link text-2xl'>KIRON</Link>
-            <ul className='flex justify-center sm:justify-end items-center space-x-10 md:space-x-16 h-full'>
-                {
-                    nav_links.map((link, idx) =>
-                        <li key={idx} className='link nav-link'>
-                            <Link to={link.link}>
-                                {link.content}
-                            </Link>
-                        </li>)
-                }
-            </ul>
+            <Link to='/' className='link nav-link text-3xl font-bold text-gray-100 hover:text-gray-200 transition-colors'>KIRON</Link>
+
+            <div className='flex items-center'>
+                <WideNav/>
+                <MobileNav/>
+            </div>
         </motion.nav>
     )
 }

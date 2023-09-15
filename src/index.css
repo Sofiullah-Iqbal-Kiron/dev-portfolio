@@ -4,7 +4,7 @@
 
 @layer components {
     .link {
-        @apply transition-all duration-150
+        @apply transition-all duration-150 no-underline
     }
 
     .nav-link {
@@ -12,14 +12,14 @@
     }
 
     .social-link {
-        @apply hover:scale-105
+        @apply hover:scale-110
     }
 
-    .hero-page{
+    .hero-page {
         @apply min-h-screen flex flex-col md:flex-row justify-center space-y-12 md:space-y-0 md:justify-around items-center
     }
 
-    #my-skills{
+    #my-skills {
         @apply text-[10rem] text-gray-500 font-serif text-right flex flex-col justify-center overflow-y-auto
     }
 }

@@ -9,15 +9,15 @@ interface Links {
 
 const social_links: Array<Links> = [
     {
-        content: <FaFacebook className='text-2xl sm:text-3xl lg:text-4xl text-gray-100'/>,
+        content: <FaFacebook className='text-3xl lg:text-4xl text-blue-500'/>,
         link: 'https://www.facebook.com/kiron1023'
     },
     {
-        content: <FaLinkedin className='text-2xl sm:text-3xl lg:text-4xl text-gray-100'/>,
+        content: <FaLinkedin className='rounded-xl text-3xl lg:text-4xl text-blue-600'/>,
         link: 'https://www.linkedin.com/in/sofiullah-iqbal-kiron-968a841b9/'
     },
     {
-        content: <FaGithub className='text-2xl sm:text-3xl lg:text-4xl text-gray-100'/>,
+        content: <FaGithub className='text-3xl lg:text-4xl text-gray-200'/>,
         link: 'https://github.com/Sofiullah-Iqbal-Kiron'
     },
 ]
@@ -28,7 +28,7 @@ export function SocialLinks() {
             className='flex space-x-10 md:space-x-0 md:flex-col md:space-y-8'>
             {
                 social_links.map((link, idx) =>
-                    <motion.li className='link social-link link-underline'>
+                    <motion.li className='link social-link link-underline bg-white/10 backdrop-blur-lg p-1.5 rounded-full'>
                         <a href={link.link}>{link.content}</a>
                     </motion.li>)
             }
