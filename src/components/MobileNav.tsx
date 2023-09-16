@@ -1,15 +1,18 @@
+import {motion} from "framer-motion"
 import {CgMenuRightAlt} from "react-icons/cg";
 import {GiSplitCross} from "react-icons/gi"
 import { useState } from 'react';
 
+import { front_nav_links } from "../constants";
+import { Link } from "react-router-dom";
+
 function ExpandedBar() {
     return (
-        <ul className="z-50 absolute top-12 -right-3 p-5 rounded-sm bg-white/20 backdrop-blur-xl flex flex-col justify-between items-start text-xl">
-            {/* links are global state via zustand */}
-            <li>About</li>
-            <li>Projects</li>
-            <li>Contact</li>
-        </ul>
+        <motion.div initial={{scale: 0.01, opacity: 0}} animate={{scale: 1, opacity: 1}} transition={{duration: 0.15}} className="z-100 absolute top-12 -right-3 p-5 rounded-sm bg-white/20 backdrop-blur-xl flex flex-col justify-between items-start text-xl">
+            {front_nav_links.map((link,idx)=>
+                <Link to={link.link} className="hover:text-gray-100 transition-colors duration-150">{link.content}</Link>
+            )}
+        </motion.div>
     )
 }
 
@@ -18,9 +21,9 @@ export function MobileNav() {
 
     return (
         <div className="md:hidden flex flex-col justify-center items-center">
-            <button onClick={()=>setExpanded(!expanded)} className='text-teal-300 hover:text-gray-200 relative'>
-                {!expanded && <CgMenuRightAlt className="text-4xl transition-all duration-200"/>}
-                {expanded && <GiSplitCross className="text-3xl transition-all duration-200"/>}
+            <button className="text-teal-500 relative">
+                {!expanded && <CgMenuRightAlt onClick={()=>setExpanded(!expanded)} className="text-4xl transition-all duration-200"/>}
+                {expanded && <GiSplitCross onClick={()=>setExpanded(!expanded)} className="text-3xl transition-all duration-200"/>}
                 {expanded && <ExpandedBar/>}
             </button>
         </div>
