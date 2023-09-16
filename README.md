@@ -1,7 +1,7 @@
 ## Preamble
 This is my second dev standard portfolio. Dark mode.
 
-### Technologies Used
+### Libraries used
 1. React
 2. Tailwind CSS
 3. Framer Motion

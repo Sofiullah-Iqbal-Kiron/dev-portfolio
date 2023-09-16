@@ -37,14 +37,14 @@ export function HeroPage() {
                     animate={{y: 0, opacity: 1}}
                     transition={{delay: 1, duration: 0.7}}
 
-                    className='text-3xl sm:text-4xl md:text-6xl font-medium'>Sofiullah Iqbal Kiron
+                    className='text-3xl md:text-4xl lg:text-6xl font-medium transition-all duration-150'>Sofiullah Iqbal Kiron
                 </motion.h1>
                 <motion.h2
                     initial={{y: 20, opacity: 0}}
                     animate={{y: 0, opacity: 1}}
                     transition={{delay: 1.5, duration: 0.7}}
 
-                    className='text-xl sm:text-2xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-br from-gray-100 to-gray-300'>Full
+                    className='text-xl md:text-2xl lg:text-4xl text-transparent bg-clip-text bg-gradient-to-br from-gray-100 to-gray-300 transition-all duration-150'>Full
                     Stack Web Programmer
                 </motion.h2>
             </div>

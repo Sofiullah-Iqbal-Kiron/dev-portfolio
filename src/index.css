@@ -16,7 +16,7 @@
     }
 
     .hero-page {
-        @apply min-h-screen flex flex-col md:flex-row justify-center space-y-12 md:space-y-0 md:justify-around items-center
+        @apply min-h-screen flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:justify-around items-center
     }
 
     #my-skills {

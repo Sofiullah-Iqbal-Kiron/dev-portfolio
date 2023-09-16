@@ -10,10 +10,10 @@ export function Navbar() {
             animate={{y: 0, opacity: 1}}
             transition={{duration: 1}}
 
-            id='navbar' className='bg-white/10 backdrop-blur-sm fixed top-0 inset-x-0 z-30 h-[4rem] flex justify-between items-center px-5'
+            id='navbar' className='bg-white/10 backdrop-blur-sm fixed top-0 inset-x-0 z-30 h-[3.25rem] md:h-[4rem] flex justify-between items-center px-5'
         >
 
-            <Link to='/' className='link nav-link text-3xl font-bold text-gray-100 hover:text-gray-200 transition-colors'>KIRON</Link>
+            <Link to='/' className='link nav-link text-3xl font-bold text-teal-600 md:text-gray-100 hover:text-gray-200 transition-colors'>KIRON</Link>
 
             <div className='flex items-center'>
                 <WideNav/>
