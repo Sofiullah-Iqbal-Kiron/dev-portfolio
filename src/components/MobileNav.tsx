@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
 function ExpandedBar() {
     return (
         <motion.div initial={{scale: 0.01, opacity: 0}} animate={{scale: 1, opacity: 1}} transition={{duration: 0.15}} className="z-100 absolute top-12 -right-3 p-5 rounded-sm bg-white/20 backdrop-blur-xl flex flex-col justify-between items-start text-xl">
-            {front_nav_links.map((link,idx)=>
-                <Link to={link.link} className="hover:text-gray-100 transition-colors duration-150">{link.content}</Link>
+            {front_nav_links.map((link, idx)=>
+                <Link key={idx} to={link.link} className="hover:text-gray-100 transition-colors duration-150">{link.content}</Link>
             )}
         </motion.div>
     )

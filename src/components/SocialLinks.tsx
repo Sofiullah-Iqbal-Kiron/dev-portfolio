@@ -13,7 +13,7 @@ const social_links: Array<Links> = [
         link: 'https://www.facebook.com/kiron1023'
     },
     {
-        content: <FaLinkedin className='rounded-xl text-3xl lg:text-4xl text-blue-600'/>,
+        content: <FaLinkedin className='rounded-2xl text-3xl lg:text-4xl text-blue-600'/>,
         link: 'https://www.linkedin.com/in/sofiullah-iqbal-kiron-968a841b9/'
     },
     {

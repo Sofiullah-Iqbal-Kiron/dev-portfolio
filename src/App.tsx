@@ -10,7 +10,7 @@ import galaxy_bg from "../src/assets/galaxy_bg.jpg";
 function App() {
     return (
         <div style={{backgroundImage: `url('${galaxy_bg}')`}}
-             className='relative bg-cover bg-gradient-to-r from-gray-950 via-gray-900 to-gray-950 text-white min-h-screen overflow-x-hidden overflow-y-hidden px-5 lg:px-0'>
+             className='bg-cover bg-gradient-to-r from-gray-950 via-gray-900 to-gray-950 text-white min-h-screen min-w-full overflow-x-hidden overflow-y-hidden px-5 lg:px-0'>
             <Navbar/>
             <Routes>
                 <Route path='/' element={<HeroPage/>}/>
