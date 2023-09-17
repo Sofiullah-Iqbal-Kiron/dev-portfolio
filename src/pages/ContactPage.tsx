@@ -63,7 +63,7 @@ function ContactForm(){
 
     return (
         <form onSubmit={handleSubmit(onContactFormSubmit)} className="font-serif w-full sm:w-1/2 md:w-1/3 flex flex-col justify-center items-center space-y-5">
-            <legend className="text-2xl text-center mb-8 sm:mb-5">Let me know what kind of project you want</legend>
+            <legend className="text-3xl text-center mb-8 sm:mb-5 font-black text-transparent bg-gradient-to-r from-violet-300 via-rose-300 to-pink-300 bg-clip-text">Let me know what kind of project you want</legend>
             <input {...register("name")} placeholder="Your Name" className="contact-form-input"/>
             <input {...register("email")} type="email" placeholder="Your Email" className="contact-form-input"/>
             <textarea {...register("project abstract")} placeholder="Project Abstract" className="contact-form-textarea"/>
